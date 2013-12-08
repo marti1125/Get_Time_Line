@@ -1,0 +1,14 @@
+{
+  "name": "Twitter_Service",
+  "version": "1.0.0",
+  "description": "get time line",
+  "main": "service.js",
+  "scripts": {
+    "start": "node service.js"
+  },
+  "repository": "https://github.com/marti1125/Get_Time_Line",
+  "author": "Willy Aguirre",
+  "license": "GPLv3",
+  "dependencies": {
+    "router": "0.6.2"    
+}
