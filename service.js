@@ -1,3 +1,5 @@
+var connectTimeout = require('connect-timeout');
+var timeout = connectTimeout({ time: 30000 });
 var express = require('express');
 var Twit = require('twit');
 var app = express();
@@ -8,6 +10,8 @@ var twitter = new Twit({
   access_token: '79004248-hqFbqQ9w3BWHI9aqtGfSN2qnh7RVlkX56dyF30ZG4',
   access_token_secret: 's2R7YOJWMWYkQQk57KbNUkqwoA8VoH8eBfvi4VeNY'
 });
+
+app.use(timeout);
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

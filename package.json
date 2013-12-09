@@ -10,6 +10,7 @@
   "author": "Willy Aguirre",
   "license": "GPLv3",
   "dependencies": {
+    "connect-timeout": "0.0.1",
     "express": "3.4.6",
     "twit": "1.1.11"
   },
