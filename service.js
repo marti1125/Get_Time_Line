@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 
 app.get('/', function(req, res){
 	res.send('<!doctype html>\n<html lang="en">\n' +
- '<head>\n<meta charset="utf-8">\n<title>Test web page on node.js</title>\n' +
+ '<head>\n<meta charset="utf-8">\n<title>Twitter Time Line</title>\n' +
  '<style type="text/css">* {font-family:arial, sans-serif;}</style>\n' +
  '</head>\n<body>\n<h1>Get Time Line</h1>\n' +
  '<div id="content"><p>List of users:</p><ul><li>/lineaunope</li><li>/USGSted</li><li>/USGSBigQuakes</li></ul></div>' +
@@ -42,4 +42,7 @@ app.get('/usgsbigquakes', function(req, res){
 	});
 });
 
-app.listen(3000);
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
